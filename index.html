@@ -4,81 +4,126 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Awaab Javed | Laravel Developer</title>
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Smooth Scroll -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Mouse icon animation */
+    .mouse-scroll {
+      width: 24px;
+      height: 40px;
+      border: 2px solid #4b5563;
+      border-radius: 20px;
+      position: relative;
+      margin: 0 auto;
+    }
+
+    .mouse-scroll::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 8px;
+      background-color: #4b5563;
+      border-radius: 2px;
+      animation: scroll 1s infinite;
+    }
+
+    @keyframes scroll {
+      0% { top: 8px; opacity: 1; }
+      100% { top: 24px; opacity: 0; }
+    }
+  </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
-  <!-- Hero -->
-  <section class="min-h-screen flex items-center justify-center text-center px-4 bg-white" data-aos="fade-down">
-    <div>
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">Awaab Javed</h1>
-      <p class="text-xl md:text-2xl mb-6">Senior Laravel Developer & Web Specialist</p>
-      <a href="Awaab Laravel Developer.pdf" download class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">
-        Download Resume
-      </a>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center bg-white px-4" id="home" data-aos="fade-down">
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Awaab Javed</h1>
+    <p class="text-xl md:text-2xl text-gray-600 mb-6">Senior Laravel Developer</p>
+    <a href="Awaab Laravel Developer .pdf" download class="bg-blue-600 text-white px-6 py-3 rounded-full hover:bg-blue-700 transition">
+      Download Resume
+    </a>
+    <div class="mt-12">
+      <div class="mouse-scroll"></div>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="py-16 bg-gray-50" id="skills" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Skills & Highlights</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
-        <div class="p-6 bg-white shadow rounded">Laravel, PHP, OOP</div>
-        <div class="p-6 bg-white shadow rounded">API Integration</div>
-        <div class="p-6 bg-white shadow rounded">HTML5, CSS, JavaScript</div>
-        <div class="p-6 bg-white shadow rounded">Bootstrap, jQuery</div>
-        <div class="p-6 bg-white shadow rounded">Project Management</div>
-        <div class="p-6 bg-white shadow rounded">Creative & Problem Solver</div>
+  <!-- Skills Section -->
+  <section class="py-20 bg-gray-50" id="skills" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Skills</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="bg-white shadow px-4 py-2 rounded">Laravel, PHP, Ajax</span>
+        <span class="bg-white shadow px-4 py-2 rounded">HTML, CSS, Bootstrap</span>
+        <span class="bg-white shadow px-4 py-2 rounded">JavaScript, jQuery</span>
+        <span class="bg-white shadow px-4 py-2 rounded">Third-Party APIs</span>
+        <span class="bg-white shadow px-4 py-2 rounded">Critical Observation</span>
+        <span class="bg-white shadow px-4 py-2 rounded">Project Management</span>
       </div>
     </div>
   </section>
 
-  <!-- Experience -->
-  <section class="py-16" id="experience" data-aos="fade-right">
+  <!-- Experience Section -->
+  <section class="py-20" id="experience" data-aos="fade-right">
     <div class="max-w-4xl mx-auto px-4">
       <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
 
-      <div class="mb-8">
+      <div class="mb-10 bg-white p-6 rounded shadow">
         <h3 class="text-xl font-semibold">Laravel Developer – Haramayn Groups (1+ Years)</h3>
-        <p class="text-gray-700">Developed Umrah booking system with APIs, payment integration (Hyper & Myfatoorah).</p>
-        <a href="https://alhijaztours.net" class="text-blue-600 hover:underline" target="_blank">alhijaztours.net</a>
+        <p class="text-gray-700">Built Umrah Booking System with APIs & Payments (Hyper, MyFatoorah). <br />
+        <a href="https://alhijaztours.net" target="_blank" class="text-blue-600 underline">alhijaztours.net</a>
+        </p>
       </div>
 
-      <div>
-        <h3 class="text-xl font-semibold">Laravel Developer – BlueHorns Technologies (1+ Years)</h3>
-        <p class="text-gray-700">Built travel system with third-party hotel booking APIs. Maintained Laravel app.</p>
-        <a href="https://holiday-hunter.testcamp.uk" class="text-blue-600 hover:underline" target="_blank">holiday-hunter.testcamp.uk</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="py-16 bg-gray-50" id="projects" data-aos="zoom-in">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Personal Projects</h2>
-      <div class="space-y-6">
-        <div class="p-6 bg-white shadow rounded">
-          <h3 class="text-xl font-semibold">Ecommerce Site</h3>
-          <p>Laravel-based ecommerce with admin panel. Stack: Laravel, JS, Bootstrap.</p>
-        </div>
-        <div class="p-6 bg-white shadow rounded">
-          <h3 class="text-xl font-semibold">Location Tracker</h3>
-          <p>Tracks user location using IP address. Built with Laravel and JS.</p>
-        </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-xl font-semibold">Laravel Developer – BlueHorns Technologies (1.5+ Years)</h3>
+        <p class="text-gray-700">
+          Migrated Laravel 5 → 11, Integrated APIs for hotel booking. <br />
+          <a href="https://wiseamigo.com" target="_blank" class="text-blue-600 underline">wiseamigo.com</a> | 
+          <a href="https://holiday-hunters.co.uk" target="_blank" class="text-blue-600 underline">holiday-hunters.co.uk</a> | 
+          <a href="https://carltonscott.com" target="_blank" class="text-blue-600 underline">carltonscott.com</a>
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="py-16" id="contact" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-      <p>Email: <a href="mailto:awaabjaved393@gmail.com" class="text-blue-600">awaabjaved393@gmail.com</a></p>
-      <p>Phone: <a href="tel:+923224551468" class="text-blue-600">+92 322 4551468</a></p>
-      <p>LinkedIn: <a href="http://www.linkedin.com/in/awaab-javed-1a63031b9" class="text-blue-600" target="_blank">View Profile</a></p>
-      <p>GitHub: <a href="https://github.com/iamqamarali/Eeno" class="text-blue-600" target="_blank">See Work</a></p>
+  <!-- Projects Section -->
+  <section class="py-20 bg-gray-50" id="projects" data-aos="zoom-in">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-10">Projects</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Ecommerce Site</h3>
+          <p>Laravel-based ecommerce platform with admin panel using Bootstrap and JS.</p>
+        </div>
+        <div class="bg-white p-6 rounded shadow">
+          <h3 class="text-xl font-semibold mb-2">Location Tracker</h3>
+          <p>Tracks logged-in users using IP and Mapbox. Stack: Laravel, Bootstrap, jQuery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="py-20" id="contact" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact</h2>
+      <p class="mb-2">📧 <a href="mailto:awaabjaved393@gmail.com" class="text-blue-600">awaabjaved393@gmail.com</a></p>
+      <p class="mb-2">📞 <a href="tel:+923224551468" class="text-blue-600">+92 322 4551468</a></p>
+      <p class="mb-2">💼 <a href="https://www.linkedin.com/in/awaab-javed-1a63031b9" target="_blank" class="text-blue-600">LinkedIn Profile</a></p>
+      <p>💻 <a href="https://github.com/iamqamarali/Eeno" target="_blank" class="text-blue-600">GitHub Project</a></p>
     </div>
   </section>
 
@@ -87,7 +132,7 @@
     &copy; 2025 Awaab Javed. All rights reserved.
   </footer>
 
-  <!-- AOS Scripts -->
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 1000 });
