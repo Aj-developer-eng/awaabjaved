@@ -1,113 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Awaab Javed - Laravel Developer</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awaab Javed | Laravel Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-20">
-    <div class="container mx-auto text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Awaab Javed</h1>
-      <p class="text-xl md:text-2xl">Laravel Developer | Web Developer</p>
-      <div class="mt-6">
-        <a href="#resume" class="bg-white text-indigo-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">View My Resume</a>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Hero -->
+  <section class="min-h-screen flex items-center justify-center text-center px-4 bg-white" data-aos="fade-down">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Awaab Javed</h1>
+      <p class="text-xl md:text-2xl mb-6">Senior Laravel Developer & Web Specialist</p>
+      <a href="Awaab Laravel Developer.pdf" download class="inline-block bg-blue-600 text-white px-6 py-3 rounded-full shadow hover:bg-blue-700 transition">
+        Download Resume
+      </a>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="py-16 bg-gray-50" id="skills" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Skills & Highlights</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-center">
+        <div class="p-6 bg-white shadow rounded">Laravel, PHP, OOP</div>
+        <div class="p-6 bg-white shadow rounded">API Integration</div>
+        <div class="p-6 bg-white shadow rounded">HTML5, CSS, JavaScript</div>
+        <div class="p-6 bg-white shadow rounded">Bootstrap, jQuery</div>
+        <div class="p-6 bg-white shadow rounded">Project Management</div>
+        <div class="p-6 bg-white shadow rounded">Creative & Problem Solver</div>
       </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section class="py-16 container mx-auto px-6" id="about">
-    <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-    <p class="text-center max-w-2xl mx-auto leading-relaxed text-lg">
-      Senior Web Developer specializing in front-end development with extensive experience in all stages of the development cycle for dynamic web projects. Skilled in PHP (Laravel), JavaScript, MySQL, and more. Strong background in project management and customer relations.
-    </p>
-  </section>
+  <!-- Experience -->
+  <section class="py-16" id="experience" data-aos="fade-right">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
 
-  <!-- Skills Section -->
-  <section class="bg-gray-100 py-16" id="skills">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
-        <div class="p-4 bg-white rounded-lg shadow">Laravel</div>
-        <div class="p-4 bg-white rounded-lg shadow">PHP OOP</div>
-        <div class="p-4 bg-white rounded-lg shadow">JavaScript</div>
-        <div class="p-4 bg-white rounded-lg shadow">HTML5 / CSS3</div>
-        <div class="p-4 bg-white rounded-lg shadow">Bootstrap</div>
-        <div class="p-4 bg-white rounded-lg shadow">jQuery / AJAX</div>
-        <div class="p-4 bg-white rounded-lg shadow">MySQL</div>
-        <div class="p-4 bg-white rounded-lg shadow">Project Management</div>
+      <div class="mb-8">
+        <h3 class="text-xl font-semibold">Laravel Developer – Haramayn Groups (1+ Years)</h3>
+        <p class="text-gray-700">Developed Umrah booking system with APIs, payment integration (Hyper & Myfatoorah).</p>
+        <a href="https://alhijaztours.net" class="text-blue-600 hover:underline" target="_blank">alhijaztours.net</a>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold">Laravel Developer – BlueHorns Technologies (1+ Years)</h3>
+        <p class="text-gray-700">Built travel system with third-party hotel booking APIs. Maintained Laravel app.</p>
+        <a href="https://holiday-hunter.testcamp.uk" class="text-blue-600 hover:underline" target="_blank">holiday-hunter.testcamp.uk</a>
       </div>
     </div>
   </section>
 
-  <!-- Experience Section -->
-  <section class="py-16 container mx-auto px-6" id="resume">
-    <h2 class="text-3xl font-bold text-center mb-8">Experience</h2>
-    <div class="space-y-6 max-w-3xl mx-auto">
-      <div class="p-6 bg-white rounded-lg shadow">
-        <h3 class="text-xl font-semibold">Laravel Developer - Haramayn Groups (1+ Years)</h3>
-        <ul class="list-disc pl-6 mt-2 text-gray-700">
-          <li>Implemented and maintained Laravel project in Haramayn Groups.</li>
-          <li>Developed Hotel Booking API integrations for Umrah system (alhijaztours.net).</li>
-          <li>Integrated payment methods like Hyper and Myfatoorah.</li>
-        </ul>
-      </div>
-      <div class="p-6 bg-white rounded-lg shadow">
-        <h3 class="text-xl font-semibold">Laravel Developer - BlueHorns Technologies (1+ Years)</h3>
-        <ul class="list-disc pl-6 mt-2 text-gray-700">
-          <li>Implemented and maintained Laravel project in BlueHorns Technologies.</li>
-          <li>Developed Hotel Booking API integrations for Traveling system (holiday-hunter.testcamp.uk).</li>
-          <li>Enhanced application performance with debugging and troubleshooting.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="text-center mt-8">
-      <a href="Awaab%20Laravel%20Developer.pdf" download class="bg-indigo-600 text-white px-6 py-3 rounded-full hover:bg-indigo-700 transition">Download Resume (PDF)</a>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section class="bg-gray-100 py-16" id="projects">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="p-6 bg-white rounded-lg shadow">
+  <!-- Projects -->
+  <section class="py-16 bg-gray-50" id="projects" data-aos="zoom-in">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10">Personal Projects</h2>
+      <div class="space-y-6">
+        <div class="p-6 bg-white shadow rounded">
           <h3 class="text-xl font-semibold">Ecommerce Site</h3>
-          <p class="text-gray-700 mt-2">Developed Ecommerce site with Admin Panel using PHP Laravel, Bootstrap, and JS.</p>
+          <p>Laravel-based ecommerce with admin panel. Stack: Laravel, JS, Bootstrap.</p>
         </div>
-        <div class="p-6 bg-white rounded-lg shadow">
+        <div class="p-6 bg-white shadow rounded">
           <h3 class="text-xl font-semibold">Location Tracker</h3>
-          <p class="text-gray-700 mt-2">Developed a location tracker to monitor logged-in users using their IP addresses.</p>
+          <p>Tracks user location using IP address. Built with Laravel and JS.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section class="py-16 container mx-auto px-6" id="contact">
-    <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
-    <div class="text-center">
-      <p>Email: <a href="mailto:awaabjaved393@gmail.com" class="text-indigo-600 hover:underline">awaabjaved393@gmail.com</a></p>
-      <p>Phone: +92 3224551468</p>
-      <p>
-        <a href="http://www.linkedin.com/in/awaab-javed-1a63031b9" class="text-indigo-600 hover:underline">LinkedIn</a> | 
-        <a href="https://github.com/iamqamarali/Eeno" class="text-indigo-600 hover:underline">GitHub</a>
-      </p>
+  <!-- Contact -->
+  <section class="py-16" id="contact" data-aos="fade-up">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+      <p>Email: <a href="mailto:awaabjaved393@gmail.com" class="text-blue-600">awaabjaved393@gmail.com</a></p>
+      <p>Phone: <a href="tel:+923224551468" class="text-blue-600">+92 322 4551468</a></p>
+      <p>LinkedIn: <a href="http://www.linkedin.com/in/awaab-javed-1a63031b9" class="text-blue-600" target="_blank">View Profile</a></p>
+      <p>GitHub: <a href="https://github.com/iamqamarali/Eeno" class="text-blue-600" target="_blank">See Work</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-800 text-gray-300 text-center py-6">
-    <p>&copy; 2025 Awaab Javed. All rights reserved.</p>
+  <footer class="text-center py-6 bg-white text-gray-500 text-sm">
+    &copy; 2025 Awaab Javed. All rights reserved.
   </footer>
+
+  <!-- AOS Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
 </body>
 </html>
