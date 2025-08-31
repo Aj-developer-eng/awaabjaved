@@ -3,192 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Awaab Javed | Laravel Developer</title>
+  <title>Awaab Javed | Laravel & Frontend Developer</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    html { scroll-behavior: smooth; }
-    /* Floating profile image animation */
-    .float {
-      animation: float 4s ease-in-out infinite;
-    }
-    @keyframes float {
-      0% { transform: translateY(0px); }
-      50% { transform: translateY(-15px); }
-      100% { transform: translateY(0px); }
-    }
-    /* Typing animation */
-    .typing {
-      border-right: .15em solid orange;
-      white-space: nowrap;
-      overflow: hidden;
-      animation: typing 3s steps(25, end), blink .8s infinite;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink {
-      50% { border-color: transparent }
-    }
-    /* Skill bar animation */
-    .skill-bar {
-      height: 10px; border-radius: 10px; overflow: hidden;
-    }
-    .skill-fill {
-      height: 100%;
-      background: linear-gradient(to right, #3b82f6, #9333ea);
-      animation: fill 2s ease-in-out forwards;
-    }
-    @keyframes fill {
-      from { width: 0 }
-      to { width: var(--percent) }
-    }
-  </style>
+  <script src="https://unpkg.com/@tailwindcss/forms"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-sans">
-
+<body class="bg-gray-900 text-white font-sans">
+  
   <!-- Navbar -->
-  <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
-    <nav class="max-w-6xl mx-auto px-6 flex justify-between items-center py-3">
-      <h1 class="text-xl font-bold text-blue-600">Awaab Javed</h1>
-      <ul class="flex gap-6 text-sm font-medium">
-        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
-        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
-        <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
-        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <nav class="flex justify-between items-center px-6 py-4 bg-gray-800 shadow-lg fixed w-full top-0 z-50">
+    <h1 class="text-xl font-bold">Awaab<span class="text-blue-400">.Dev</span></h1>
+    <ul class="hidden md:flex gap-6">
+      <li><a href="#about" class="hover:text-blue-400">About</a></li>
+      <li><a href="#skills" class="hover:text-blue-400">Skills</a></li>
+      <li><a href="#projects" class="hover:text-blue-400">Projects</a></li>
+      <li><a href="#contact" class="hover:text-blue-400">Contact</a></li>
+    </ul>
+  </nav>
 
   <!-- Hero Section -->
-  <section id="home" 
-    class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white px-6 pt-20">
-    <div class="md:w-1/2 space-y-5" data-aos="fade-right">
-      <h1 class="text-5xl md:text-6xl font-extrabold">Awaab Javed</h1>
-      <p class="text-lg md:text-2xl">
-        <span id="typing" class="typing"></span>
-      </p>
-      <a href="Awaab Laravel Developer.pdf" 
-        class="bg-white text-blue-600 px-6 py-2 rounded-full shadow-lg font-semibold hover:bg-gray-100 transition">
-        📄 Download Resume
-      </a>
-    </div>
-    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center" data-aos="fade-left">
-      <img src="your-image.jpg" alt="Awaab Javed" 
-        class="w-60 h-60 rounded-full border-4 border-white shadow-xl float" />
-    </div>
+  <section class="h-screen flex flex-col justify-center items-center text-center px-4" id="home">
+    <img src="your-image.jpg" alt="Your Photo" class="w-40 h-40 rounded-full border-4 border-blue-400 shadow-lg mb-6 animate-bounce">
+    <h2 class="text-4xl font-bold">Hi, I’m <span class="text-blue-400">Awaab Javed</span></h2>
+    <p class="mt-2 text-lg"><span id="typed"></span></p>
+    <a href="#projects" class="mt-6 bg-blue-500 hover:bg-blue-600 px-6 py-3 rounded-full shadow-lg transition">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 px-6 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
+    <p class="text-gray-300 text-center leading-relaxed">
+      I’m a passionate <span class="text-blue-400">Laravel & Frontend Developer</span> with 2+ years of experience.  
+      I love building scalable backends and beautiful frontends.  
+      Skilled in PHP, Laravel, Tailwind, Bootstrap, MySQL, and JavaScript.
+    </p>
   </section>
 
   <!-- Skills -->
-  <section id="skills" class="py-20 bg-gray-50" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">⚡ Skills</h2>
-      <div class="grid md:grid-cols-2 gap-10">
-        <!-- Frontend -->
-        <div class="bg-white rounded-xl shadow-md p-6" data-aos="zoom-in">
-          <h3 class="font-semibold mb-4 text-lg">Frontend</h3>
-          <div class="space-y-4">
-            <p>HTML / CSS</p>
-            <div class="skill-bar"><div class="skill-fill" style="--percent:90%"></div></div>
-            <p>JavaScript</p>
-            <div class="skill-bar"><div class="skill-fill" style="--percent:85%"></div></div>
-            <p>Tailwind / Bootstrap</p>
-            <div class="skill-bar"><div class="skill-fill" style="--percent:80%"></div></div>
-          </div>
-        </div>
-        <!-- Backend -->
-        <div class="bg-white rounded-xl shadow-md p-6" data-aos="zoom-in">
-          <h3 class="font-semibold mb-4 text-lg">Backend</h3>
-          <div class="space-y-4">
-            <p>Laravel</p>
-            <div class="skill-bar"><div class="skill-fill" style="--percent:95%"></div></div>
-            <p>PHP / MySQL</p>
-            <div class="skill-bar"><div class="skill-fill" style="--percent:90%"></div></div>
-            <p>API Development</p>
-            <div class="skill-bar"><div class="skill-fill" style="--percent:85%"></div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience -->
-  <section id="experience" class="py-20" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12">💼 Experience</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition" data-aos="flip-left">
-          <h3 class="font-semibold text-lg">Laravel Developer – Haramayn Groups</h3>
-          <p class="text-sm text-gray-600 mt-2">
-            Built Umrah Booking System, APIs, Payments (Hyper, MyFatoorah).<br>
-            <a href="https://alhijaztours.net" class="text-blue-600 underline" target="_blank">alhijaztours.net</a>
-          </p>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition" data-aos="flip-right">
-          <h3 class="font-semibold text-lg">Laravel Developer – BlueHorns Technologies</h3>
-          <p class="text-sm text-gray-600 mt-2">
-            Migrated Laravel 5 → 11, built travel systems & APIs.<br>
-            <a href="https://wiseamigo.com" class="text-blue-600 underline" target="_blank">wiseamigo.com</a> | 
-            <a href="https://holiday-hunters.co.uk" class="text-blue-600 underline" target="_blank">holiday-hunters.co.uk</a>
-          </p>
-        </div>
-      </div>
+  <section id="skills" class="py-16 bg-gray-800">
+    <h2 class="text-3xl font-bold text-center mb-10">Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">Laravel</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">PHP</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">TailwindCSS</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">Bootstrap</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">MySQL</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">JavaScript</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">Git/GitHub</div>
+      <div class="p-6 bg-gray-700 rounded-xl shadow hover:scale-105 transition">REST APIs</div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section id="projects" class="py-20 bg-gray-50" data-aos="fade-up">
-    <div class="max-w-5xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-12">🚀 Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 hover:rotate-1 transition" data-aos="fade-right">
-          <h3 class="text-lg font-semibold mb-2">Ecommerce Site</h3>
-          <p class="text-gray-600 text-sm">Built with Laravel, Bootstrap, Admin panel, Products & Orders.</p>
-        </div>
-        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 hover:-rotate-1 transition" data-aos="fade-left">
-          <h3 class="text-lg font-semibold mb-2">Location Tracker</h3>
-          <p class="text-gray-600 text-sm">Tracks user IPs via MapBox & jQuery for location mapping.</p>
-        </div>
+  <section id="projects" class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-10">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Project Card -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">Blog CMS</h3>
+        <p class="text-gray-400 mb-4">A blog system built with Laravel & MySQL. Features CRUD, categories, and comments.</p>
+        <a href="#" class="text-blue-400 hover:underline">Live Demo</a> | 
+        <a href="#" class="text-gray-400 hover:underline">GitHub</a>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">E-Commerce Store</h3>
+        <p class="text-gray-400 mb-4">Online store with cart, checkout, and admin panel built in Laravel.</p>
+        <a href="#" class="text-blue-400 hover:underline">Live Demo</a> | 
+        <a href="#" class="text-gray-400 hover:underline">GitHub</a>
+      </div>
+
+      <div class="bg-gray-800 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <h3 class="text-xl font-bold mb-3">Task Manager</h3>
+        <p class="text-gray-400 mb-4">A task management web app with drag & drop, built using Laravel + JS.</p>
+        <a href="#" class="text-blue-400 hover:underline">Live Demo</a> | 
+        <a href="#" class="text-gray-400 hover:underline">GitHub</a>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-20" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8">📩 Contact</h2>
-      <p class="mb-2">📧 <a href="mailto:awaabjaved393@gmail.com" class="text-blue-600">awaabjaved393@gmail.com</a></p>
-      <p class="mb-2">📞 <a href="tel:+923224551468" class="text-blue-600">+92 322 4551468</a></p>
-      <p class="mb-2">🔗 <a href="https://www.linkedin.com/in/awaab-javed-1a63031b9" class="text-blue-600">LinkedIn</a></p>
-      <p>💻 <a href="https://github.com/iamqamarali/Eeno" class="text-blue-600">GitHub</a></p>
-    </div>
+  <section id="contact" class="py-16 bg-gray-800 text-center">
+    <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+    <p class="text-gray-400 mb-6">Let’s work together on your next project 🚀</p>
+    <a href="mailto:youremail@example.com" class="bg-blue-500 px-6 py-3 rounded-full hover:bg-blue-600 transition">Email Me</a>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white py-6 text-center text-sm text-gray-600">&copy; 2025 Awaab Javed. Built with ❤️ using Tailwind.</footer>
+  <footer class="py-6 text-center text-gray-500 bg-gray-900 border-t border-gray-700">
+    © 2025 Awaab Javed. All rights reserved.
+  </footer>
 
-  <!-- AOS -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Typed.js Script -->
   <script>
-    AOS.init({ duration: 1000, once: true });
-
-    // Typing effect
-    const roles = ["Laravel Developer", "Full-Stack Developer", "Backend Specialist"];
-    let index = 0;
-    const typingEl = document.getElementById("typing");
-
-    function typeRole() {
-      typingEl.textContent = roles[index];
-      typingEl.classList.remove("typing");
-      void typingEl.offsetWidth; // reset animation
-      typingEl.classList.add("typing");
-      index = (index + 1) % roles.length;
-    }
-    typeRole();
-    setInterval(typeRole, 4000);
+    new Typed("#typed", {
+      strings: ["Laravel Developer", "Frontend Developer", "Backend Expert", "Freelancer"],
+      typeSpeed: 60,
+      backSpeed: 40,
+      loop: true
+    });
   </script>
 </body>
 </html>
-
