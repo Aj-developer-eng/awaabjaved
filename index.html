@@ -8,22 +8,41 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
-    /* Floating mouse scroll animation */
-    .mouse-scroll {
-      width: 28px; height: 48px;
-      border: 2px solid #fff; border-radius: 20px;
-      position: relative; margin: 0 auto;
+    /* Floating profile image animation */
+    .float {
+      animation: float 4s ease-in-out infinite;
     }
-    .mouse-scroll::before {
-      content: ''; position: absolute; top: 10px; left: 50%;
-      transform: translateX(-50%);
-      width: 4px; height: 8px;
-      background: #fff; border-radius: 2px;
-      animation: scrollAnim 1.2s infinite;
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
     }
-    @keyframes scrollAnim {
-      0% { top: 10px; opacity: 1; }
-      100% { top: 25px; opacity: 0; }
+    /* Typing animation */
+    .typing {
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: typing 3s steps(25, end), blink .8s infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    /* Skill bar animation */
+    .skill-bar {
+      height: 10px; border-radius: 10px; overflow: hidden;
+    }
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(to right, #3b82f6, #9333ea);
+      animation: fill 2s ease-in-out forwards;
+    }
+    @keyframes fill {
+      from { width: 0 }
+      to { width: var(--percent) }
     }
   </style>
 </head>
@@ -45,15 +64,20 @@
 
   <!-- Hero Section -->
   <section id="home" 
-    class="min-h-screen flex flex-col items-center justify-center text-center relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white px-6">
-    <div data-aos="fade-down">
-      <h1 class="text-5xl md:text-6xl font-extrabold mb-3">Awaab Javed</h1>
-      <p class="text-lg md:text-2xl opacity-90 mb-6">Laravel & Full-Stack Web Developer</p>
+    class="min-h-screen flex flex-col md:flex-row items-center justify-center text-center md:text-left relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white px-6 pt-20">
+    <div class="md:w-1/2 space-y-5" data-aos="fade-right">
+      <h1 class="text-5xl md:text-6xl font-extrabold">Awaab Javed</h1>
+      <p class="text-lg md:text-2xl">
+        <span id="typing" class="typing"></span>
+      </p>
       <a href="Awaab Laravel Developer.pdf" 
         class="bg-white text-blue-600 px-6 py-2 rounded-full shadow-lg font-semibold hover:bg-gray-100 transition">
         📄 Download Resume
       </a>
-      <div class="mt-12"><div class="mouse-scroll"></div></div>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center" data-aos="fade-left">
+      <img src="your-image.jpg" alt="Awaab Javed" 
+        class="w-60 h-60 rounded-full border-4 border-white shadow-xl float" />
     </div>
   </section>
 
@@ -61,31 +85,48 @@
   <section id="skills" class="py-20 bg-gray-50" data-aos="fade-up">
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-12">⚡ Skills</h2>
-      <div class="flex flex-wrap justify-center gap-4">
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">Laravel</span>
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">PHP & Ajax</span>
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">HTML & CSS</span>
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">JavaScript</span>
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">APIs</span>
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">Bootstrap</span>
-        <span class="px-5 py-2 bg-white shadow-md rounded-full">Project Management</span>
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Frontend -->
+        <div class="bg-white rounded-xl shadow-md p-6" data-aos="zoom-in">
+          <h3 class="font-semibold mb-4 text-lg">Frontend</h3>
+          <div class="space-y-4">
+            <p>HTML / CSS</p>
+            <div class="skill-bar"><div class="skill-fill" style="--percent:90%"></div></div>
+            <p>JavaScript</p>
+            <div class="skill-bar"><div class="skill-fill" style="--percent:85%"></div></div>
+            <p>Tailwind / Bootstrap</p>
+            <div class="skill-bar"><div class="skill-fill" style="--percent:80%"></div></div>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="bg-white rounded-xl shadow-md p-6" data-aos="zoom-in">
+          <h3 class="font-semibold mb-4 text-lg">Backend</h3>
+          <div class="space-y-4">
+            <p>Laravel</p>
+            <div class="skill-bar"><div class="skill-fill" style="--percent:95%"></div></div>
+            <p>PHP / MySQL</p>
+            <div class="skill-bar"><div class="skill-fill" style="--percent:90%"></div></div>
+            <p>API Development</p>
+            <div class="skill-bar"><div class="skill-fill" style="--percent:85%"></div></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-20" data-aos="zoom-in">
+  <section id="experience" class="py-20" data-aos="fade-up">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-3xl font-bold text-center mb-12">💼 Experience</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-right">
+        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition" data-aos="flip-left">
           <h3 class="font-semibold text-lg">Laravel Developer – Haramayn Groups</h3>
           <p class="text-sm text-gray-600 mt-2">
             Built Umrah Booking System, APIs, Payments (Hyper, MyFatoorah).<br>
             <a href="https://alhijaztours.net" class="text-blue-600 underline" target="_blank">alhijaztours.net</a>
           </p>
         </div>
-        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-left">
+        <div class="bg-white p-6 rounded-xl shadow-lg transform hover:-translate-y-2 hover:shadow-2xl transition" data-aos="flip-right">
           <h3 class="font-semibold text-lg">Laravel Developer – BlueHorns Technologies</h3>
           <p class="text-sm text-gray-600 mt-2">
             Migrated Laravel 5 → 11, built travel systems & APIs.<br>
@@ -102,11 +143,11 @@
     <div class="max-w-5xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold mb-12">🚀 Projects</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-right">
+        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 hover:rotate-1 transition" data-aos="fade-right">
           <h3 class="text-lg font-semibold mb-2">Ecommerce Site</h3>
           <p class="text-gray-600 text-sm">Built with Laravel, Bootstrap, Admin panel, Products & Orders.</p>
         </div>
-        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-left">
+        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 hover:-rotate-1 transition" data-aos="fade-left">
           <h3 class="text-lg font-semibold mb-2">Location Tracker</h3>
           <p class="text-gray-600 text-sm">Tracks user IPs via MapBox & jQuery for location mapping.</p>
         </div>
@@ -130,6 +171,24 @@
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    // Typing effect
+    const roles = ["Laravel Developer", "Full-Stack Developer", "Backend Specialist"];
+    let index = 0;
+    const typingEl = document.getElementById("typing");
+
+    function typeRole() {
+      typingEl.textContent = roles[index];
+      typingEl.classList.remove("typing");
+      void typingEl.offsetWidth; // reset animation
+      typingEl.classList.add("typing");
+      index = (index + 1) % roles.length;
+    }
+    typeRole();
+    setInterval(typeRole, 4000);
+  </script>
 </body>
 </html>
+
