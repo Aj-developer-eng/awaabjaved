@@ -8,16 +8,17 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
   <style>
     html { scroll-behavior: smooth; }
+    /* Floating mouse scroll animation */
     .mouse-scroll {
       width: 28px; height: 48px;
-      border: 2px solid #4b5563; border-radius: 20px;
+      border: 2px solid #fff; border-radius: 20px;
       position: relative; margin: 0 auto;
     }
     .mouse-scroll::before {
       content: ''; position: absolute; top: 10px; left: 50%;
       transform: translateX(-50%);
       width: 4px; height: 8px;
-      background: #4b5563; border-radius: 2px;
+      background: #fff; border-radius: 2px;
       animation: scrollAnim 1.2s infinite;
     }
     @keyframes scrollAnim {
@@ -26,57 +27,69 @@
     }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-800 font-sans">
+<body class="bg-gray-100 text-gray-900 font-sans">
 
-  <!-- Hero with Tech Background -->
-  <section class="min-h-screen flex flex-col items-center justify-center text-center bg-fixed bg-no-repeat bg-cover relative px-4"
-           id="home"
-           style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"
-           data-aos="fade-down">
-    <div class="absolute inset-0 bg-gradient-to-b from-white/80 to-white/90 backdrop-blur-sm"></div>
-    <div class="relative z-10">
-      <h1 class="text-5xl font-bold mb-2">Awaab Javed</h1>
-      <p class="text-xl text-gray-600 mb-6 animate-pulse">Laravel & Full-Stack Web Developer</p>
-      <a href="Awaab Laravel Developer .pdf" download class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-all shadow-md">
-        Download Resume
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 w-full bg-white/70 backdrop-blur-md shadow z-50">
+    <nav class="max-w-6xl mx-auto px-6 flex justify-between items-center py-3">
+      <h1 class="text-xl font-bold text-blue-600">Awaab Javed</h1>
+      <ul class="flex gap-6 text-sm font-medium">
+        <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+        <li><a href="#skills" class="hover:text-blue-600">Skills</a></li>
+        <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
+        <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+        <li><a href="#contact" class="hover:text-blue-600">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" 
+    class="min-h-screen flex flex-col items-center justify-center text-center relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white px-6">
+    <div data-aos="fade-down">
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-3">Awaab Javed</h1>
+      <p class="text-lg md:text-2xl opacity-90 mb-6">Laravel & Full-Stack Web Developer</p>
+      <a href="Awaab Laravel Developer.pdf" 
+        class="bg-white text-blue-600 px-6 py-2 rounded-full shadow-lg font-semibold hover:bg-gray-100 transition">
+        📄 Download Resume
       </a>
-      <div class="mt-10"><div class="mouse-scroll"></div></div>
+      <div class="mt-12"><div class="mouse-scroll"></div></div>
     </div>
   </section>
 
   <!-- Skills -->
-  <section class="py-16 bg-gray-50" id="skills" data-aos="fade-up">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-8">Skills</h2>
-      <div class="flex flex-wrap justify-center gap-3">
-        <span class="bg-white shadow px-4 py-2 rounded">Laravel</span>
-        <span class="bg-white shadow px-4 py-2 rounded">PHP & Ajax</span>
-        <span class="bg-white shadow px-4 py-2 rounded">HTML, CSS</span>
-        <span class="bg-white shadow px-4 py-2 rounded">JavaScript, jQuery</span>
-        <span class="bg-white shadow px-4 py-2 rounded">Third-Party APIs</span>
-        <span class="bg-white shadow px-4 py-2 rounded">Bootstrap</span>
-        <span class="bg-white shadow px-4 py-2 rounded">Project Management</span>
+  <section id="skills" class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">⚡ Skills</h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">Laravel</span>
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">PHP & Ajax</span>
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">HTML & CSS</span>
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">JavaScript</span>
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">APIs</span>
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">Bootstrap</span>
+        <span class="px-5 py-2 bg-white shadow-md rounded-full">Project Management</span>
       </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section class="py-16" id="experience" data-aos="zoom-in-up">
-    <div class="max-w-4xl mx-auto px-4">
-      <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
-      <div class="grid gap-6">
-        <div class="bg-white p-5 rounded shadow hover:scale-105 transition" data-aos="fade-right">
-          <h3 class="text-lg font-semibold">Laravel Developer – Haramayn Groups</h3>
-          <p class="text-sm text-gray-700 mt-1">
-            Built Umrah Booking System, APIs, & Payments (Hyper, MyFatoorah).<br />
+  <section id="experience" class="py-20" data-aos="zoom-in">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">💼 Experience</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-right">
+          <h3 class="font-semibold text-lg">Laravel Developer – Haramayn Groups</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Built Umrah Booking System, APIs, Payments (Hyper, MyFatoorah).<br>
             <a href="https://alhijaztours.net" class="text-blue-600 underline" target="_blank">alhijaztours.net</a>
           </p>
         </div>
-        <div class="bg-white p-5 rounded shadow hover:scale-105 transition" data-aos="fade-left">
-          <h3 class="text-lg font-semibold">Laravel Developer – BlueHorns Technologies</h3>
-          <p class="text-sm text-gray-700 mt-1">
-            Migrated Laravel 5 → 11, built travel systems & APIs.<br />
-            <a href="https://wiseamigo.com" class="text-blue-600 underline" target="_blank">wiseamigo.com</a> |
+        <div class="bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-left">
+          <h3 class="font-semibold text-lg">Laravel Developer – BlueHorns Technologies</h3>
+          <p class="text-sm text-gray-600 mt-2">
+            Migrated Laravel 5 → 11, built travel systems & APIs.<br>
+            <a href="https://wiseamigo.com" class="text-blue-600 underline" target="_blank">wiseamigo.com</a> | 
             <a href="https://holiday-hunters.co.uk" class="text-blue-600 underline" target="_blank">holiday-hunters.co.uk</a>
           </p>
         </div>
@@ -85,38 +98,38 @@
   </section>
 
   <!-- Projects -->
-  <section class="py-16 bg-gray-50" id="projects" data-aos="zoom-in">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-10">Projects</h2>
+  <section id="projects" class="py-20 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-12">🚀 Projects</h2>
       <div class="grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-5 rounded shadow hover:scale-105 transition-all" data-aos="fade-right">
-          <h3 class="font-semibold text-lg mb-1">Ecommerce Site</h3>
-          <p class="text-sm text-gray-700">Built with Laravel, Bootstrap, Admin panel, Products & Orders.</p>
+        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-right">
+          <h3 class="text-lg font-semibold mb-2">Ecommerce Site</h3>
+          <p class="text-gray-600 text-sm">Built with Laravel, Bootstrap, Admin panel, Products & Orders.</p>
         </div>
-        <div class="bg-white p-5 rounded shadow hover:scale-105 transition-all" data-aos="fade-left">
-          <h3 class="font-semibold text-lg mb-1">Location Tracker</h3>
-          <p class="text-sm text-gray-700">Tracks user IPs via MapBox & jQuery for location mapping.</p>
+        <div class="p-6 bg-white rounded-xl shadow-md hover:scale-105 transition" data-aos="fade-left">
+          <h3 class="text-lg font-semibold mb-2">Location Tracker</h3>
+          <p class="text-gray-600 text-sm">Tracks user IPs via MapBox & jQuery for location mapping.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section class="py-16" id="contact" data-aos="fade-up">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-6">Contact</h2>
-      <p class="text-gray-700 mb-2">📧 <a href="mailto:awaabjaved393@gmail.com" class="text-blue-600">awaabjaved393@gmail.com</a></p>
-      <p class="text-gray-700 mb-2">📞 <a href="tel:+923224551468" class="text-blue-600">+92 322 4551468</a></p>
-      <p class="text-gray-700 mb-2">🔗 <a href="https://www.linkedin.com/in/awaab-javed-1a63031b9" class="text-blue-600">LinkedIn</a></p>
-      <p class="text-gray-700">💻 <a href="https://github.com/iamqamarali/Eeno" class="text-blue-600">GitHub</a></p>
+  <section id="contact" class="py-20" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8">📩 Contact</h2>
+      <p class="mb-2">📧 <a href="mailto:awaabjaved393@gmail.com" class="text-blue-600">awaabjaved393@gmail.com</a></p>
+      <p class="mb-2">📞 <a href="tel:+923224551468" class="text-blue-600">+92 322 4551468</a></p>
+      <p class="mb-2">🔗 <a href="https://www.linkedin.com/in/awaab-javed-1a63031b9" class="text-blue-600">LinkedIn</a></p>
+      <p>💻 <a href="https://github.com/iamqamarali/Eeno" class="text-blue-600">GitHub</a></p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-white py-6 text-center text-sm text-gray-500">&copy; 2025 Awaab Javed</footer>
+  <footer class="bg-white py-6 text-center text-sm text-gray-600">&copy; 2025 Awaab Javed. Built with ❤️ using Tailwind.</footer>
 
   <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1200, once: true });</script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
